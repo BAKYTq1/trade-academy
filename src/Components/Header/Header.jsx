@@ -1,11 +1,87 @@
-import React from 'react'
+import React, { useState } from 'react';
+import './Header.scss';
+import icon from '../../assets/image/icon.png';
+import { FiX } from 'react-icons/fi';
 
 function Header() {
+  const [active, setActive] = useState('Проблемы');
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const headerLinks = [
+    { title: 'Проблемы', link: '' },
+    { title: 'обучение', link: '' },
+    { title: 'Результаты', link: '' },
+    { title: 'FAQ', link: '' },
+    { title: 'Наши трейдеры', link: '' },
+    { title: 'Психология', link: '' },
+  ];
+
+  const handleClick = (title) => {
+    setActive(title);
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div>
-      header
-    </div>
-  )
+    <header>
+      <div className="header">
+        <img src={icon} alt="logo" className="logo" />
+
+        <button 
+          className={`menu-toggle ${menuOpen ? 'open' : ''}`} 
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span className="hamburger"></span>
+        </button>
+
+        <nav className="desktop-nav">
+          {headerLinks.map((el, index) => (
+            <li
+              key={index}
+              onClick={() => handleClick(el.title)}
+              className={active === el.title ? 'active' : ''}
+            >
+              {el.title}
+            </li>
+          ))}
+        </nav>
+
+        <button className="consultation">
+          КОНСУЛЬТАЦИЯ
+        </button>
+      </div>
+
+      <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+        <button 
+          className="menu-toggle open" 
+          onClick={toggleMenu}
+          aria-label="Close menu"
+        >
+          <FiX size={28} color="#FFB200" />
+        </button>
+
+        <ul className="mobile-nav">
+          {headerLinks.map((el, index) => (
+            <li
+              key={index}
+              className={active === el.title ? 'active' : ''}
+              onClick={() => handleClick(el.title)}
+            >
+              {el.title}
+            </li>
+          ))}
+        </ul>
+
+        <button className="mobile-consultation">
+          КОНСУЛЬТАЦИЯ
+        </button>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
