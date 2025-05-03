@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.scss';
-import icon from '../../assets/image/icon.png';
+import icon from '../../widgets/assets/image/icon.png';
 import { FiX } from 'react-icons/fi';
 
 function Header() {
