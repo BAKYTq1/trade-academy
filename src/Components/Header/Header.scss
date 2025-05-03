@@ -10,6 +10,7 @@ header {
     position: relative;
     z-index: 1000;
 
+
     .header {
         width: 100%;
         max-width: 1253px;
@@ -19,12 +20,12 @@ header {
         align-items: center;
 
         img {
-            height: 66px; // Fixed height for logo
+            height: 66px; 
             width: auto;
         }
 
         nav {
-            display: none; // Hidden by default on mobile
+            display: none; 
 
             @media (min-width: 992px) {
                 display: flex;
