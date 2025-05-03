@@ -1,8 +1,12 @@
 import React from 'react'
+import Swiper from '../../Components/Swiper/Swiper'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+        <Swiper/>
+
+    </div>
   )
 }
 

@@ -1,11 +1,11 @@
 import React from 'react'
 import { RouterProvider } from 'react-router-dom';
 import { myRouter } from './routes/router';
-import './App.css'
+import './widgets/styles/App.css'
 
 function App() {
   return (
-    <div>
+    <div className='wrapper'>
       <RouterProvider router={myRouter}/>
       
     </div>
