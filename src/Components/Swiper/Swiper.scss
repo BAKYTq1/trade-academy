@@ -1,6 +1,6 @@
 .results-container {
     padding: 2rem;
-    background: #1a1a1a;
+    // background: #1a1a1a;
     text-align: center;
     position: relative;
     background-image: url('../../widgets//assets/image/swiperBackround.png');
@@ -48,10 +48,10 @@
           
           @keyframes underlineGrow {
             0%, 100% {
-              width: 145px;
+                width: 50px;
             }
             50% {
-              width: 50px;
+                width: 145px;
             }
           }
           
@@ -63,11 +63,11 @@
             margin: 0 auto 1rem auto;
             animation: fadeInText 0.5s ease-in-out 0.2s forwards;
             position: relative;
+            transition: all 0.3s ease-in-out;
 
             &:hover {
                 color: #FFB200;
                 text-shadow: 0 4px 15px rgba(255, 178, 0, 0.5);
-                transition: all 0.3s ease-in-out;
             }
           
             &::after {
@@ -80,11 +80,7 @@
               border-radius: 2px;
               animation: underlineGrow 1s infinite ease-in-out;
             }
-            &:hover::after{
-                
-                animation: none;
-                transition: all 0.3s ease-in-out;
-            }
+
           }
           
     }
