@@ -5,7 +5,7 @@ import './widgets/styles/App.css'
 
 function App() {
   return (
-    <div className='wrapper'>
+    <div className=''>
       <RouterProvider router={myRouter}/>
       
     </div>
