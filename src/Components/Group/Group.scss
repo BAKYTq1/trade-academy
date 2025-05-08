@@ -1,6 +1,7 @@
 .group {
     position: relative;
-    overflow: visible; /* Ensure edges are not clipped */
+    overflow: visible; 
+    
 
     .img_coin {
         width: 1090px;
@@ -19,7 +20,7 @@
     height: auto;
     margin-top: 100px;
     margin-bottom: 240px;
-    overflow: visible; /* Ensure edges are not clipped */
+    overflow: visible; 
 
     .group_title_1 {
         height: 1120px;
