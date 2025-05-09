@@ -6,11 +6,15 @@ import Group from '../../Components/Group/Group'
 import Education from '../../Components/Education/Education'
 import WhyUs from '../../Components/WhyUs/WhyUs'
 import Results from '../../Components/Results/Results'
+import STRATEGIES from '../../Components/STRATEGIES/STRATEGIES'
+import Get from '../../Components/get/Get'
 
 function Home() {
   return (
     <div>
       <Banner />
+      <Get/>
+      <STRATEGIES/>
       <Results/>
       <WhyUs />
       <Education />

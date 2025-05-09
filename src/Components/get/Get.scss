@@ -1,0 +1,280 @@
+.container-get {
+    background: transparent;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+    .highlight {
+        color: #FFD400;
+    }
+    @media (max-width:941px) {
+        font-size: 200%;
+        text-align: center;
+        width: 100%;
+        
+    }
+}
+
+.sub-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-bottom: 40px;
+
+    .highlight-text {
+        color: #FFD400;
+        font-weight: bold;
+    }
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 20px; /* Added gap for better spacing */
+}
+
+.bitcoin-image {
+    width: 200px;
+    filter: drop-shadow(0 0 50px rgba(255, 223, 0, 0.5));
+    margin-right: 20px;
+    position: absolute;
+    z-index: 0;
+}
+
+.course-card {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    width: 524px;
+    height: 359px;
+    margin: 0 auto;
+
+    img {
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        width: 83%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        left: 30%;
+        top: -25px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 20%;
+        width: 110%;
+        height: 110%;
+        background: linear-gradient(135deg, #FFB300 0%, #FFC107 50%, #FFE082 100%);
+        border-radius: 10px;
+        z-index: 1;
+        filter: blur(150px);
+    }
+}
+
+.info-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    height: 335px;
+    width: 524px;
+    margin-top: -15px;
+    gap: 10px; 
+
+    .box {
+        background-color: #FFD400;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        max-width: 300px;
+        text-align: left;
+        width: 100%;
+        height: 21%;
+    }
+
+    .arrow {
+        font-size: 2rem;
+        color: #FFD400;
+        margin: 5px 0;
+    }
+}
+
+.learn-more {
+    margin-top: 150px;
+    width: 100%;
+    max-width: 450px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #FFB300 0%, #FFC107 50%, #FFE082 100%);
+    color: #FFFFFF;
+    font-size: calc(14px + 0.3vw);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 50px rgba(255, 179, 0, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+    /* Simplified animation for performance */
+    animation: buttonGlow 3s ease-in-out infinite alternate;
+
+    @media (min-width: 768px) {
+        height: 58px;
+        line-height: 58px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 60px rgba(255, 179, 0, 0.75);
+    }
+
+    &:active {
+        transform: scale(0.98);
+        box-shadow: 0px 0px 30px rgba(255, 179, 0, 0.4);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px; /* Increased gap for clarity */
+        margin: 0 auto;
+    }
+
+    .bitcoin-image {
+        position: static;
+        margin: 0 auto 20px;
+        display: none; /* Hidden as per original */
+    }
+
+    .info-boxes {
+        margin: 20px auto 0;
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        // flex-wrap: wrap; /* Allow boxes to wrap if needed */
+        justify-content: center;
+        gap: 15px; /* Consistent gap */
+
+        .box {
+            max-width: 185px; /* Allow two boxes per row */
+            height: auto;
+            padding: 15px;
+            flex: 1 1 55px; /* Flexible width */
+        }
+
+        .arrow {
+            transform: rotate(90deg);
+            font-size: 1.8rem; /* Slightly smaller for balance */
+        }
+    }
+
+    .course-card {
+        width: 100%;
+        max-width: 600px; /* Prevent overly wide cards */
+        height: auto;
+        margin-bottom: 20px;
+
+        img {
+            position: static;
+            width: 100%;
+        }
+
+        &::before {
+            display: none; /* Avoid visual clutter */
+        }
+    }
+}
+
+/* New breakpoint for mid-sized tablets */
+@media (max-width: 600px) {
+    .main-heading {
+        font-size: 2rem; /* Slightly larger for readability */
+    }
+
+    .sub-text {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .info-boxes {
+        flex-direction: column; /* Stack boxes for smaller screens */
+        gap: 10px;
+
+        .box {
+            max-width: 100%; 
+            padding: 12px;
+            font-size: 1rem;
+            height: 50px;
+        }
+
+        .arrow {
+            font-size: 1.5rem;
+            transform: none; 
+            display: none;
+        }
+    }
+
+    .learn-more {
+        max-width: 95%; /* Slightly wider for small screens */
+        font-size: 0.95rem;
+        height: 46px;
+        line-height: 46px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px; /* Reduced padding for small screens */
+    }
+
+    .main-heading {
+        font-size: 1.6rem; /* Adjusted for small screens */
+    }
+
+    .sub-text {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .bitcoin-image {
+        width: 120px; /* Smaller image */
+    }
+
+    .info-boxes {
+        gap: 8px;
+
+        .box {
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+    }
+
+    .learn-more {
+        font-size: 0.9rem;
+        height: 44px;
+        line-height: 44px;
+        max-width: 100%; /* Full width */
+    }
+}
