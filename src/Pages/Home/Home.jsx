@@ -8,11 +8,15 @@ import WhyUs from '../../Components/WhyUs/WhyUs'
 import Results from '../../Components/Results/Results'
 import STRATEGIES from '../../Components/STRATEGIES/STRATEGIES'
 import Get from '../../Components/get/Get'
+import Course from '../../Components/Course/Course'
+import About from '../../Components/about/About'
 
 function Home() {
   return (
     <div>
       <Banner />
+      <About/>
+      <Course/>
       <Get/>
       <STRATEGIES/>
       <Results/>
