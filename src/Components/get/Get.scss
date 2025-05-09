@@ -7,20 +7,16 @@
     align-items: center;
     font-family: Arial, sans-serif;
     text-align: center;
+    margin-top: 140px;
 }
 
 .main-heading {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out forwards;
 
     .highlight {
         color: #FFD400;
-    }
-    @media (max-width:941px) {
-        font-size: 200%;
-        text-align: center;
-        width: 100%;
-        
     }
 }
 
@@ -28,6 +24,7 @@
     font-size: 1.2rem;
     max-width: 800px;
     margin-bottom: 40px;
+    animation: slideUp 1s ease-out forwards;
 
     .highlight-text {
         color: #FFD400;
@@ -43,7 +40,7 @@
     max-width: 1200px;
     position: relative;
     flex-wrap: wrap;
-    gap: 20px; /* Added gap for better spacing */
+    gap: 20px;
 }
 
 .bitcoin-image {
@@ -52,6 +49,7 @@
     margin-right: 20px;
     position: absolute;
     z-index: 0;
+    animation: float 4s ease-in-out infinite;
 }
 
 .course-card {
@@ -61,6 +59,7 @@
     width: 524px;
     height: 359px;
     margin: 0 auto;
+    animation: scaleIn 1s ease-out forwards;
 
     img {
         border-radius: 10px;
@@ -72,6 +71,7 @@
         left: 30%;
         top: -25px;
     }
+
     &::before {
         content: "";
         position: absolute;
@@ -83,6 +83,7 @@
         border-radius: 10px;
         z-index: 1;
         filter: blur(150px);
+        animation: glowBackground 3s ease-in-out infinite alternate;
     }
 }
 
@@ -95,7 +96,7 @@
     height: 335px;
     width: 524px;
     margin-top: -15px;
-    gap: 10px; 
+    gap: 10px;
 
     .box {
         background-color: #FFD400;
@@ -107,6 +108,7 @@
         text-align: left;
         width: 100%;
         height: 21%;
+        animation: pulse 2s ease-in-out infinite;
     }
 
     .arrow {
@@ -133,8 +135,6 @@
     cursor: pointer;
     box-shadow: 0px 0px 50px rgba(255, 179, 0, 0.6);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-sizing: border-box;
-    /* Simplified animation for performance */
     animation: buttonGlow 3s ease-in-out infinite alternate;
 
     @media (min-width: 768px) {
@@ -153,19 +153,105 @@
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes glowBackground {
+    from {
+        filter: blur(140px);
+        opacity: 0.8;
+    }
+    to {
+        filter: blur(160px);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 212, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(255, 212, 0, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 212, 0, 0.5);
+    }
+}
+
+@keyframes buttonGlow {
+    from {
+        box-shadow: 0px 0px 50px rgba(255, 179, 0, 0.6);
+    }
+    to {
+        box-shadow: 0px 0px 70px rgba(255, 179, 0, 0.8);
+    }
+}
+
 /* Media Queries */
+@media (max-width: 941px) {
+    .main-heading {
+        font-size: 200%;
+        text-align: center;
+        width: 100%;
+    }
+}
+
 @media (max-width: 1024px) {
     .main-content {
         flex-direction: column;
         align-items: center;
-        gap: 30px; /* Increased gap for clarity */
+        gap: 30px;
         margin: 0 auto;
     }
 
     .bitcoin-image {
         position: static;
         margin: 0 auto 20px;
-        display: none; /* Hidden as per original */
+        display: none;
     }
 
     .info-boxes {
@@ -173,26 +259,25 @@
         height: auto;
         width: 100%;
         flex-direction: row;
-        // flex-wrap: wrap; /* Allow boxes to wrap if needed */
         justify-content: center;
-        gap: 15px; /* Consistent gap */
+        gap: 15px;
 
         .box {
-            max-width: 185px; /* Allow two boxes per row */
+            max-width: 185px;
             height: auto;
             padding: 15px;
-            flex: 1 1 55px; /* Flexible width */
+            flex: 1 1 55px;
         }
 
         .arrow {
             transform: rotate(90deg);
-            font-size: 1.8rem; /* Slightly smaller for balance */
+            font-size: 1.8rem;
         }
     }
 
     .course-card {
         width: 100%;
-        max-width: 600px; /* Prevent overly wide cards */
+        max-width: 600px;
         height: auto;
         margin-bottom: 20px;
 
@@ -202,15 +287,14 @@
         }
 
         &::before {
-            display: none; /* Avoid visual clutter */
+            display: none;
         }
     }
 }
 
-/* New breakpoint for mid-sized tablets */
 @media (max-width: 600px) {
     .main-heading {
-        font-size: 2rem; /* Slightly larger for readability */
+        font-size: 2rem;
     }
 
     .sub-text {
@@ -219,11 +303,11 @@
     }
 
     .info-boxes {
-        flex-direction: column; /* Stack boxes for smaller screens */
+        flex-direction: column;
         gap: 10px;
 
         .box {
-            max-width: 100%; 
+            max-width: 100%;
             padding: 12px;
             font-size: 1rem;
             height: 50px;
@@ -231,13 +315,13 @@
 
         .arrow {
             font-size: 1.5rem;
-            transform: none; 
+            transform: none;
             display: none;
         }
     }
 
     .learn-more {
-        max-width: 95%; /* Slightly wider for small screens */
+        max-width: 95%;
         font-size: 0.95rem;
         height: 46px;
         line-height: 46px;
@@ -245,12 +329,12 @@
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 20px 10px; /* Reduced padding for small screens */
+    .container-get {
+        padding: 20px 10px;
     }
 
     .main-heading {
-        font-size: 1.6rem; /* Adjusted for small screens */
+        font-size: 1.6rem;
     }
 
     .sub-text {
@@ -259,7 +343,7 @@
     }
 
     .bitcoin-image {
-        width: 120px; /* Smaller image */
+        width: 120px;
     }
 
     .info-boxes {
@@ -275,6 +359,6 @@
         font-size: 0.9rem;
         height: 44px;
         line-height: 44px;
-        max-width: 100%; /* Full width */
+        max-width: 100%;
     }
 }

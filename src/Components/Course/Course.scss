@@ -1,0 +1,253 @@
+.course {
+    margin: 0 auto;
+    width: 1068px;
+    position: relative;
+
+    h1 {
+        font-weight: 600;
+        font-size: 93.61px;
+        line-height: 105.93px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        text-align: start;
+        margin: 100px 0 50px 0;
+        animation: slideIn 1.5s ease-out forwards;
+    }
+
+    .parent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        max-width: 1079px;
+        align-items: center;
+        gap: 56px 140px;
+
+        h3 {
+            font-size: 56px;
+            font-weight: 500;
+            color: #FFBC05;
+            text-shadow: 0 0 10px #FFBC05, 0 0 20px #FFBC05;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #FFBC05, 0 0 10px #FFBC05;
+            }
+
+            to {
+                text-shadow: 0 0 15px #FFBC05, 0 0 25px #FFBC05;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            vertical-align: middle;
+            text-align: start;
+            margin: 0;
+            color: #ffffff79;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            animation: scaleUp 1s ease-out forwards;
+        }
+
+        .child-1 {
+            h3 {
+                line-height: 78px;
+            }
+        }
+
+        .child-2 {
+            h3 {
+                line-height: 51px;
+            }
+        }
+
+        .child-3 {
+            h3 {
+                line-height: 51px;
+            }
+        }
+    }
+
+    .coin_img {
+        position: absolute;
+        width: 368px;
+        height: 240px;
+        right: -280px;
+        top: 30px;
+        transform: rotate(-40deg);
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes scaleUp {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) rotate(-40deg);
+        }
+        50% {
+            transform: translateY(-20px) rotate(-40deg);
+        }
+        100% {
+            transform: translateY(0) rotate(-40deg);
+        }
+    }
+
+    /* Adaptive styles */
+    @media screen and (max-width: 1200px) {
+        width: 90%;
+        max-width: 960px;
+
+        h1 {
+            font-size: 80px;
+            line-height: 90px;
+            margin: 80px 0 40px 0;
+        }
+
+        .parent {
+            gap: 40px 100px;
+            max-width: 960px;
+
+            h3 {
+                font-size: 48px;
+            }
+
+            .child-1 h3 {
+                line-height: 66px;
+            }
+
+            .child-2 h3,
+            .child-3 h3 {
+                line-height: 44px;
+            }
+        }
+
+        .coin_img {
+            width: 300px;
+            height: 196px;
+            right: -200px;
+            top: 20px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        max-width: 720px;
+
+        h1 {
+            font-size: 60px;
+            line-height: 68px;
+            margin: 60px 0 30px 0;
+            text-align: center;
+        }
+
+        .parent {
+            flex-direction: column;
+            gap: 32px;
+            max-width: 100%;
+            align-items: flex-start;
+
+            h3 {
+                font-size: 36px;
+            }
+
+            .child-1 h3 {
+                line-height: 50px;
+            }
+
+            .child-2 h3,
+            .child-3 h3 {
+                line-height: 36px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .coin_img {
+            width: 200px;
+            height: 130px;
+            right: 0;
+            top: 230px;
+            transform: rotate(-30deg);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 95%;
+        max-width: 100%;
+
+        h1 {
+            font-size: 40px;
+            line-height: 48px;
+            margin: 40px 0 20px 0;
+        }
+
+        .parent {
+            gap: 24px;
+
+            h3 {
+                font-size: 28px;
+            }
+
+            .child-1 h3 {
+                line-height: 38px;
+            }
+
+            .child-2 h3,
+            .child-3 h3 {
+                line-height: 30px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .coin_img {
+            width: 120px;
+            height: 78px;
+            right: -40px;
+            top: 5px;
+            transform: rotate(-20deg);
+        }
+    }
+}
