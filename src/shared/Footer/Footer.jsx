@@ -3,6 +3,7 @@ import './Footer.scss'
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
 import { LiaTelegram } from "react-icons/lia"
 import { FaXTwitter } from "react-icons/fa6"
+import icon from "../../widgets/assets/image/Mirbek_img/icon.svg"
 
 function Footer() {
   return (
@@ -30,6 +31,7 @@ function Footer() {
             </a>
           </li>
         </ul>
+        <img src={icon} alt="" />
       </div>
       
       <div className='down-footer'>
