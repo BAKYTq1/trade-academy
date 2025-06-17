@@ -1,43 +1,21 @@
-import React from 'react'
-import './STRATEGIES.scss'
-import img from '../../widgets/assets/image/Mirbek_img/Starteg3.svg'
+import './STRATEGIES.scss';
 
-function STRATEGIES() {
+function Strategies() {
     return (
-        <div className='strategies'>
-            <h2>СТРАТЕГИИ, КОТОРЫЕ<br />
-                РАБОТАТЮТ</h2>
-            <p className='up_p'>
-                Мы обучаем проверенным подходам,<br />
-                которые используют профессионалы по всему миру:
-            </p>
-            <div className="parent">
-                <div className="div1">
-                    <h3>Smart Money</h3>
-                    <h6>(SMC): изучение поведения крупных игроков.</h6>
-                </div>
-                <div className="div2">
-                    <h3>ICT:</h3>
-                    <h6>
-                        анализ рыночных структур<br />
-                        и зон ликвидности.
-                    </h6>
-                </div>
-                <div className="div3">
-                    <div>
-                    <h3>SC:</h3>
-                    <h6>
-                        понимание спроса и предложения на рынке.
-                    </h6>
+        <div className='container'>
+            <section className="differences-section">
+                <h2 className="section-title">
+                    ЧЕМ МЫ<br /><span>ОТЛИЧАЕМСЯ</span><span className="question-mark">?</span>
+                </h2>
 
-                    </div>
-                    <img src={img} alt="" />
+                <div className="differences-content">
+           <p>
+  Наставник — реальный технарь, не инфоблогер! Проверка домашек в real-time: "ты это понимаешь?" Понятные преподаватели, никаких сложностей. Доступ к библиотекам спер 99999-99999 часов обучения. Мы не говорим о том, что вы будете зарабатывать миллиарды. Возможность попасть в команду разработчиков. Мы не просто обучаем — мы воспитываем профи!
+</p>
                 </div>
-            </div>
-            <p className='down_p'>Эти методики помогут вам находить лучшие точки входа и<br />
-                выхода на рынке.</p>
+            </section>
         </div>
-    )
+    );
 }
 
-export default STRATEGIES
+export default Strategies;
