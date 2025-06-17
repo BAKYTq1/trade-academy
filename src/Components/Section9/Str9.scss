@@ -1,0 +1,212 @@
+
+.strategies {
+    width: 100%;
+    max-width: 1068px;
+    margin: 200px auto;
+    padding: 0 16px;
+
+    h2 {
+        font-weight: 500;
+        font-size: 56px;
+        line-height: 78px;
+        text-align: center;
+    }
+
+    .up_p,
+    .down_p {
+        font-size: 16px;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 30px;
+        margin-top: 50px;
+
+        div {
+            border-radius: 10px;
+            display: flex;
+            padding: 30px;
+            flex-direction: column;
+
+            h3 {
+                color: #FFBC05;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 32px;
+                letter-spacing: 7%;
+            }
+
+            h6 {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: 7%;
+            }
+        }
+
+        .div1,
+        .div2 {
+            height: 291.00006103515625px;
+            flex-direction: column;
+
+        }
+    }
+
+    .div1 {
+        grid-column: span 3 / span 3;
+        grid-row: span 3 / span 3;
+        width: 100%;
+        background:
+            linear-gradient(rgba(41, 41, 41, 0.03), rgba(41, 41, 41, 0.03)),
+            url('../../widgets/assets/image/Mirbek_img/Strateg.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .div2 {
+        grid-column: span 2 / span 2;
+        grid-row: span 3 / span 3;
+        grid-column-start: 4;
+        width: 100%;
+        background:
+            linear-gradient(rgba(41, 41, 41, 0.03), rgba(41, 41, 41, 0.03)),
+            url('../../widgets/assets/image/Mirbek_img/Strateg2.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .div3,
+    .div4,
+    .div5{
+        padding: 20px 30px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #292929;
+    }
+
+    .div3 {
+        grid-column: span 2 / span 2;
+        grid-row: span 2 / span 2;
+        grid-row-start: 4;
+        height: 107px;
+        display: flex !important;
+        justify-content: space-between;
+        position: relative;
+        width: 469.17919921875px;
+    }
+
+    .div4 {
+        grid-column: span 2 / span 2;
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        grid-row-start: 4;
+        height: 107px;
+        width: 350px;
+    }
+
+    .div5 {
+        grid-row: span 2 / span 2;
+        grid-column-start: 5;
+        grid-row-start: 4;
+        height: 107px;
+        width: 206px;
+    }
+
+
+    @media (max-width: 1024px) {
+        .parent {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        }
+
+        .div1,
+        .div2,
+        .div3 {
+            grid-column: span 2 !important;
+            width: 100%;
+        }
+
+        .div3 {
+            img {
+                top: -20px;
+                right: 40px;
+                width: 310px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 40px;
+            line-height: 56px;
+        }
+
+        .parent {
+            gap: 20px;
+        }
+
+        .div3 {
+            height: auto;
+            padding: 20px;
+        }
+
+        .div3 img {
+            right: -8px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        .parent {
+            grid-template-columns: 1fr;
+        }
+
+        .div1,
+        .div2,
+        .div3 {
+            grid-column: span 1 !important;
+            width: 100%;
+
+        }
+
+        .div3 img {
+            position: static;
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5 {
+    box-shadow: rgba(255, 188, 5, 0.2) 0 0 10px;
+    animation: glow 2s ease-in-out infinite alternate;
+    border: 1px solid rgba(255, 188, 5, 0.3);
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: rgba(255, 188, 5, 0.2) 0 0 10px;
+    }
+
+    50% {
+        box-shadow: rgba(255, 188, 5, 0.5) 0 0 25px;
+    }
+
+    100% {
+        box-shadow: rgba(255, 188, 5, 0.2) 0 0 10px;
+    }
+}
