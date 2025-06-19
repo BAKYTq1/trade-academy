@@ -62,7 +62,7 @@ const SwiperComponent = () => {
 
     return (
         <div className="results-container">
-            <div className="carousel-header">
+            <div className="carousel-header ">
                 <h1>Результаты</h1>
             </div>
 
