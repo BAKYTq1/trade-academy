@@ -6,118 +6,266 @@
     min-height: 600px;
     display: flex;
     flex-direction: column;
-
     align-items: center;
     padding: 10px 0;
     box-sizing: border-box;
     font-family: Montserrat, sans-serif;
+}
 
-    h1 {
-        font-weight: 800;
-        font-size: 101.74px;
-        line-height: 115.12px;
-        letter-spacing: 0%;
-        vertical-align: middle;
-        text-transform: uppercase;
-        color: #FFBC05;
-        margin: 0;
-        margin-left: -266px;
+.first_steps h1 {
+    font-weight: 800;
+    font-size: 101.74px;
+    line-height: 115.12px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #FFBC05;
+    margin: 0;
+    margin-left: -266px;
+}
+
+.first_steps .parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+    width: 755px;
+    height: 402px;
+    margin-left: -266px;
+}
+
+.first_steps .parent div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+}
+
+.first_steps .parent div h3 {
+    font-weight: 600;
+    font-size: 53.05px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+.first_steps .parent div p {
+    font-weight: 400;
+    font-size: 19.37px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #ffffff51;
+    text-align: start;
+}
+
+.first_steps .div1 {
+    grid-row: span 2 / span 2;
+    width: 196px;
+}
+
+.first_steps .div2 {
+    grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+    width: 409px;
+}
+
+.first_steps .div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    width: 314px;
+}
+
+.first_steps .div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 3;
+    width: 291px;
+    margin-left: -52px;
+}
+
+.first_steps .div5 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 5;
+    grid-row-start: 1;
+    width: 423px;
+    background: #D9D9D9;
+    position: relative;
+}
+
+.first_steps .div5 .btn {
+    position: absolute;
+    bottom: -25px;
+    left: 40%;
+    width: 315.3682px;
+    height: 64.7631px;
+    background: #FFBC05;
+    color: #413000;
+    font-weight: 700;
+    font-size: 28.52px;
+    line-height: 57.03px;
+    text-align: start;
+    cursor: pointer;
+    transform: rotate(-6.8deg);
+    justify-content: flex-start;
+}
+
+/* Адаптивность добавлена снизу */
+@media (max-width: 1200px) {
+    .first_steps h1 {
+        font-size: 80px;
+        margin-left: -200px;
     }
-
-
-    .parent {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        gap: 20px;
-        width: 755px;
-        height: 402px;
-        margin-left: -266px;
-
-        div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 10px;
-            padding-left: 30px;
-            border-radius: 10px;
-
-
-            h3 {
-
-                font-weight: 600;
-                font-size: 53.05px;
-                line-height: 110.00000000000001%;
-                letter-spacing: 0%;
-                text-transform: uppercase;
-
-            }
-
-            p {
-                font-weight: 400;
-                font-size: 19.37px;
-                line-height: 130%;
-                letter-spacing: 0%;
-                color: #ffffff51;
-                text-align: start;
-            }
-        }
+    
+    .first_steps .parent {
+        width: 600px;
+        height: 320px;
+        margin-left: -200px;
     }
-
-    .div1 {
-        grid-row: span 2 / span 2;
-        width: 196px;
+    
+    .first_steps .parent div h3 {
+        font-size: 42px;
     }
-
-    .div2 {
-        grid-column: span 3 / span 3;
-        grid-row: span 2 / span 2;
-        width: 409px;
+    
+    .first_steps .parent div p {
+        font-size: 16px;
     }
-
-    .div3 {
-        grid-column: span 2 / span 2;
-        grid-row: span 2 / span 2;
-        grid-column-start: 1;
-        grid-row-start: 3;
-        width: 314px;
+    
+    .first_steps .div1 { width: 156px; }
+    .first_steps .div2 { width: 325px; }
+    .first_steps .div3 { width: 250px; }
+    .first_steps .div4 { width: 230px; margin-left: -40px; }
+    .first_steps .div5 { width: 336px; }
+    
+    .first_steps .div5 .btn {
+        width: 250px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 45px;
     }
+}
 
-    .div4 {
-        grid-column: span 2 / span 2;
-        grid-row: span 2 / span 2;
-        grid-column-start: 3;
-        grid-row-start: 3;
-        width: 291px;
-        margin-left: -52px;
+@media (max-width: 992px) {
+    .first_steps {
+        min-height: 500px;
     }
+    
+    .first_steps h1 {
+        font-size: 60px;
+        margin-left: -150px;
+        line-height: 60px;
+    }
+    
+    .first_steps .parent {
+        width: 450px;
+        height: 240px;
+        margin-left: -150px;
+    }
+    
+    .first_steps .parent div h3 {
+        font-size: 32px;
+    }
+    
+    .first_steps .parent div p {
+        font-size: 14px;
+    }
+    
+    .first_steps .div1 { width: 117px; }
+    .first_steps .div2 { width: 244px; }
+    .first_steps .div3 { width: 188px; }
+    .first_steps .div4 { width: 173px; margin-left: -30px; }
+    .first_steps .div5 { width: 252px; }
+    
+    .first_steps .div5 .btn {
+        width: 188px;
+        height: 38px;
+        font-size: 15px;
+        line-height: 34px;
+        bottom: -18px;
+    }
+}
 
-    .div5 {
-        grid-column: span 2 / span 2;
-        grid-row: span 4 / span 4;
-        grid-column-start: 5;
-        grid-row-start: 1;
-        width: 423px;
-        background: #D9D9D9;
+@media (max-width: 768px) {
+    .first_steps {
+        min-height: 400px;
+        padding: 20px 0;
+    }
+    
+    .first_steps h1 {
+        font-size: 48px;
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .first_steps .parent {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+        padding: 0 20px;
+    }
+    
+    .first_steps .parent div {
+        width: 100% !important;
+        margin-left: 0 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        padding: 15px;
+    }
+    
+    .first_steps .parent div h3 {
+        font-size: 28px;
+    }
+    
+    .first_steps .parent div p {
+        font-size: 14px;
+    }
+    .first_steps .div5 {
+        height: 300px;
+    }
+    
+    .first_steps .div5 .btn {
         position: relative;
-
-        .btn {
-            position: absolute;
-            bottom: -25px;
-            left: 40%;
-            width: 315.3682px;
-            height: 64.7631px;
-            background: #FFBC05;
-            color: #413000;
-            font-weight: 700;
-            font-size: 28.52px;
-            line-height: 57.03px;
-            text-align: start;
-            cursor: pointer;
-            transform: rotate(-6.8deg);
-            justify-content: flex-start;
-        }
+        bottom: -125px;
+        left: 270px;
+        transform: none;
+        width: 100%;
+        max-width: 250px;
+        margin: 15px auto 0;
+        text-align: center;
+        align-items: center;
+        flex-direction: row;
+        height: 45px;
+        line-height: 45px;
+        transform: rotate(-10deg);
     }
+}
 
-
+@media (max-width: 480px) {
+    .first_steps h1 {
+        font-size: 36px;
+    }
+    
+    .first_steps .parent div h3 {
+        font-size: 24px;
+    }
+    
+    .first_steps .parent div p {
+        font-size: 13px;
+    }
+    
+    .first_steps .div5 .btn {
+        height: 40px;
+        line-height: 40px;
+        font-size: 10px;
+    }
 }

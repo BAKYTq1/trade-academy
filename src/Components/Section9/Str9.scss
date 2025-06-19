@@ -119,72 +119,72 @@
     }
 
 
-    @media (max-width: 1024px) {
-        .parent {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
-        }
+    // @media (max-width: 1024px) {
+    //     .parent {
+    //         grid-template-columns: repeat(2, 1fr);
+    //         grid-template-rows: auto;
+    //     }
 
-        .div1,
-        .div2,
-        .div3 {
-            grid-column: span 2 !important;
-            width: 100%;
-        }
+    //     .div1,
+    //     .div2,
+    //     .div3 {
+    //         grid-column: span 2 !important;
+    //         width: 100%;
+    //     }
 
-        .div3 {
-            img {
-                top: -20px;
-                right: 40px;
-                width: 310px;
-            }
-        }
-    }
+    //     .div3 {
+    //         img {
+    //             top: -20px;
+    //             right: 40px;
+    //             width: 310px;
+    //         }
+    //     }
+    // }
 
-    @media (max-width: 768px) {
-        h2 {
-            font-size: 40px;
-            line-height: 56px;
-        }
+    // @media (max-width: 768px) {
+    //     h2 {
+    //         font-size: 40px;
+    //         line-height: 56px;
+    //     }
 
-        .parent {
-            gap: 20px;
-        }
+    //     .parent {
+    //         gap: 20px;
+    //     }
 
-        .div3 {
-            height: auto;
-            padding: 20px;
-        }
+    //     .div3 {
+    //         height: auto;
+    //         padding: 20px;
+    //     }
 
-        .div3 img {
-            right: -8px;
-        }
-    }
+    //     .div3 img {
+    //         right: -8px;
+    //     }
+    // }
 
-    @media (max-width: 480px) {
-        h2 {
-            font-size: 32px;
-            line-height: 40px;
-        }
+    // @media (max-width: 480px) {
+    //     h2 {
+    //         font-size: 32px;
+    //         line-height: 40px;
+    //     }
 
-        .parent {
-            grid-template-columns: 1fr;
-        }
+    //     .parent {
+    //         grid-template-columns: 1fr;
+    //     }
 
-        .div1,
-        .div2,
-        .div3 {
-            grid-column: span 1 !important;
-            width: 100%;
+    //     .div1,
+    //     .div2,
+    //     .div3 {
+    //         grid-column: span 1 !important;
+    //         width: 100%;
 
-        }
+    //     }
 
-        .div3 img {
-            position: static;
-            width: 100%;
-            margin-top: 20px;
-        }
-    }
+    //     .div3 img {
+    //         position: static;
+    //         width: 100%;
+    //         margin-top: 20px;
+    //     }
+    // }
 }
 
 .div1,
@@ -209,4 +209,164 @@
     100% {
         box-shadow: rgba(255, 188, 5, 0.2) 0 0 10px;
     }
+}
+/* Адаптивность добавляется только снизу */
+@media (max-width: 1200px) {
+  .strategies {
+    max-width: 900px;
+    margin: 150px auto;
+  }
+  
+  .strategies .parent {
+    gap: 25px;
+  }
+  
+  .strategies .div1, 
+  .strategies .div2 {
+    height: 250px;
+  }
+  
+  .strategies .div3, 
+  .strategies .div4, 
+  .strategies .div5 {
+    height: 90px;
+    padding: 15px 25px;
+  }
+  
+  .strategies .div3 { width: 400px; }
+  .strategies .div4 { width: 300px; }
+  .strategies .div5 { width: 180px; }
+}
+
+@media (max-width: 992px) {
+  .strategies {
+    max-width: 750px;
+    margin: 120px auto;
+  }
+  
+  .strategies h2 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+  
+  .strategies .parent {
+    gap: 20px;
+  }
+  
+  .strategies .div1, 
+  .strategies .div2 {
+    height: 200px;
+  }
+  
+  .strategies .div3, 
+  .strategies .div4, 
+  .strategies .div5 {
+    height: 80px;
+    padding: 12px 20px;
+  }
+  
+  .strategies .div3 h3,
+  .strategies .div4 h3,
+  .strategies .div5 h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  
+  .strategies .div3 h6,
+  .strategies .div4 h6,
+  .strategies .div5 h6 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .strategies .div3 { width: 330px; }
+  .strategies .div4 { width: 250px; }
+  .strategies .div5 { width: 150px; }
+}
+
+@media (max-width: 1030px) {
+  .strategies {
+    margin: 80px auto;
+    padding: 0 20px;
+  }
+  
+  .strategies h2 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+  
+  .strategies .parent {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+  }
+  
+  .strategies .div1 {
+    grid-column: span 2;
+    grid-row: span 1;
+    height: 180px;
+  }
+  
+  .strategies .div2 {
+    grid-column: span 2;
+    grid-row: span 1;
+    height: 180px;
+  }
+  
+  .strategies .div3, 
+  .strategies .div4, 
+  .strategies .div5 {
+    grid-column: span 1 !important;
+    grid-row: span 1;
+    width: 100% !important;
+    height: auto;
+    min-height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .strategies {
+    margin: 60px auto;
+  }
+  
+  .strategies h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .strategies .parent {
+    grid-template-columns: 1fr;
+  }
+  
+  .strategies .div1, 
+  .strategies .div2, 
+  .strategies .div3, 
+  .strategies .div4, 
+  .strategies .div5 {
+    grid-column: span 1 !important;
+    width: 100% !important;
+  }
+  
+  .strategies .div1, 
+  .strategies .div2 {
+    height: 150px;
+  }
+  
+  .strategies .parent div {
+    padding: 15px;
+  }
+  
+  .strategies .div3 h3,
+  .strategies .div4 h3,
+  .strategies .div5 h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .strategies .div3 h6,
+  .strategies .div4 h6,
+  .strategies .div5 h6 {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
