@@ -6,7 +6,7 @@ import img from '../../assets/Group 99.svg'
 
 function About() {
     return (
-        <div className='about container'>
+        <div className='about container' id='education'>
             <img className='about_coin'  src={coin} alt="" />
             <h1>Для кого это обучение?</h1>
             <p className='top-p'>Этот курс для тебя, если:</p>

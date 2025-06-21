@@ -4,7 +4,7 @@ import './style.scss';
 
 const Banner = () => {
   return (
-    <section className="banner">
+    <section className="banner" id='banner'>
       <div className="scale-wrapper">
         <div className="item-banner">
           <div className="banner-left">

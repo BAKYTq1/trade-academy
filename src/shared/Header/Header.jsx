@@ -8,12 +8,12 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const headerLinks = [
-    { title: 'Проблемы', link: '' },
-    { title: 'обучение', link: '' },
-    { title: 'Результаты', link: '' },
-    { title: 'FAQ', link: '' },
-    { title: 'Наши трейдеры', link: '' },
-    { title: 'Психология', link: '' },
+  { title: 'Проблемы', link: '/', id: 'problems' },
+    { title: 'Обучение', link: '#education', id: 'education' },
+    { title: 'Результаты', link: '#results', id: 'results' },
+    { title: 'FAQ', link: '#faq', id: 'faq' },
+    { title: 'Наши трейдеры', link: '#traders', id: 'traders' },
+    { title: 'Психология', link: '#psychology', id: 'psychology' },
   ];
 
   const handleClick = (title) => {
