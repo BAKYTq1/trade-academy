@@ -144,13 +144,11 @@
     h1 {
       font-size: 64px;
       line-height: 72px;
-      text-align: center;
+      text-align: start;
     }
 
     &__content {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 60px;
+
 
       &_left,
       &_right {
@@ -165,13 +163,13 @@
           h2 {
             font-size: 32px;
             line-height: 40px;
-            text-align: center;
+            text-align: start;
           }
 
           p {
             font-size: 14px;
             line-height: 150%;
-            text-align: center;
+            text-align: start;
           }
         }
       }
@@ -199,23 +197,32 @@
 
 @media (max-width: 768px) {
   .course {
+    margin-top: 200px;
     h1 {
+      text-align: center;
       font-size: 48px;
       line-height: 56px;
     }
 
     &__content {
       margin-top: 40px;
-
+  flex-direction: column;
+      align-items: center !important;
       &_left {
         div {
           h2 {
+            margin-top: 20px;
             font-size: 24px;
             line-height: 32px;
+            text-align: center;
+            br{
+              display: none;
+            }
           }
 
           p {
             font-size: 13px;
+            text-align: center;
           }
         }
       }
