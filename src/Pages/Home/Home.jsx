@@ -1,5 +1,4 @@
 import React from 'react'
-import Banner from '../../components/Block1/Block1'
 import About from '../../components/about/Aboutt'
 import Course from '../../components/BlockCourse/Courses'
 import Get from '../../Components/get/Get'
@@ -9,6 +8,7 @@ import Str9 from '../../components/Section9/Str9'
 import Tarif from '../../components/Block6/Tarif'
 import ChartSection from '../../components/Blocck6/ChartSection'
 import Results from '../../components/block7/Result'
+import Banner from '../../components/Ba/Block1'
 
 function Home() {
   return (
