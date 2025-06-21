@@ -1,5 +1,5 @@
 import React from 'react'
-import About from '../../components/about/Aboutt'
+import About from '../../components/Block2/Aboutt'
 import Course from '../../components/BlockCourse/Courses'
 import Get from '../../Components/get/Get'
 import Strategies from '../../components/BlockSTRATEGIES/STRATEGIE'
