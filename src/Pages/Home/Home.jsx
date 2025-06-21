@@ -1,19 +1,19 @@
 import React from 'react'
-import FirstSteps from '../../Components/FirstSteps/FirstSteps'
-import Results from '../../components/block7/Result'
-import Get from '../../Components/get/Get'
-import Course from '../../components/BlockCourse/Courses'
-import About from '../../components/about/Aboutt'
-import Strategies from '../../components/BlockSTRATEGIES/STRATEGIE'
-import Str9 from '../../Components/Section9/Str9'
-import Tarif from '../../components/Tarif/Tariff'
-import ChartSection from '../../components/Blocck6/ChartSection'
 import Banner from '../../components/Banner/Index'
+import About from '../../components/about/Aboutt'
+import Course from '../../components/BlockCourse/Courses'
+import Get from '../../Components/get/Get'
+import Strategies from '../../components/BlockSTRATEGIES/STRATEGIE'
+import FirstSteps from '../../Components/FirstSteps/FirstSteps'
+import Str9 from '../../components/Section9/Str9'
+import Tarif from '../../components/Block6/Tarif'
+import ChartSection from '../../components/Blocck6/ChartSection'
+import Results from '../../components/block7/Result'
 
 function Home() {
   return (
     <div>
-      <Banner />
+      <Banner/>
       <About/>
       <Course/>
       <ChartSection/>
@@ -22,7 +22,7 @@ function Home() {
       <Results/>
       <Tarif/>
       <Str9 />
-      <FirstSteps />
+      <FirstSteps/>
     </div>
   )
 }
