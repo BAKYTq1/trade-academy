@@ -24,25 +24,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap; 
+      // gap: 40px;
 
       .banner-left {
         z-index: 112;
-        width: 400px;
-        min-width: 300px; 
+        width: 550px;
+        min-width: 350px; 
         padding: 0 20px; 
 
         h1 {
           font-weight: 600;
-          font-size: clamp(50px, 6vw, 95px); 
+          font-size: 95px; 
           line-height: 1.1;
         }
-
+   h5{
+font-weight: 600;
+font-size: 27px;
+   }
         p {
           margin-top: 20px;
           font-weight: 400;
-          font-size: clamp(14px, 1.5vw, 16px); 
-          line-height: 1.4;
+          font-size: 16px; 
+          line-height: 100%;
         }
 
         button {
@@ -91,8 +94,6 @@
         }
 
         img {
-          width: clamp(350px, 60vw, 550px); 
-          height: clamp(350px, 35vw, 550px);
           z-index: 1;
           position: relative;
         }
@@ -101,17 +102,17 @@
   }
 
 
-  @media (max-width: 1440px) {
-    .scale-wrapper {
-      transform: scale(0.9);
-    }
-  }
+  // @media (width: 1440px) {
+  //   .scale-wrapper {
+  //     transform: scale(0.9);
+  //   }
+  // }
 
-  @media (max-width: 1200px) {
-    .banner-right {
-      margin-left: -50px !important;
-    }
-  }
+  //  {
+  //   .banner-right {
+  //     margin-left: -50px !important;
+  //   }
+  // }
 
   @media (max-width: 1024px) {
     .scale-wrapper {
@@ -119,15 +120,15 @@
     }
     
     .item-banner {
-      flex-direction: column;
-      text-align: center;
+      // flex-direction: column;
+      // text-align: center;
       
       .banner-left {
         margin-bottom: 40px;
       }
       
       .banner-right {
-        margin-left: 0 !important;
+        margin-left: 0px !important;
       }
     }
   }
@@ -136,10 +137,26 @@
     .scale-wrapper {
       transform: scale(0.7);
     }
-    
+    .item-banner{
+      flex-wrap: wrap;
+    }
+    .banner-left{
+          flex-direction: column;
+      text-align: center;
+      margin-top: 300px !important;
+      h1{
+        font-size: 60px;
+      }
+      h5{
+        font-size: 18px;
+      }
+      p{
+        font-size: 10px;
+      }
+    }
     .banner {
       height: auto;
-      padding: 60px 20px;
+      padding: 0px 0px;
     }
   }
 
