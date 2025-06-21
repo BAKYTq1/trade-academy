@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../../components/Banner/Block1'
+import Banner from '../../components/Block1/Block1'
 import About from '../../components/about/Aboutt'
 import Course from '../../components/BlockCourse/Courses'
 import Get from '../../Components/get/Get'
